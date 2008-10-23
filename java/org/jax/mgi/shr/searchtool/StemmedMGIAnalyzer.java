@@ -1,4 +1,4 @@
-package QS_Commons;
+package org.jax.mgi.shr.searchtool;
 
 import java.io.Reader;
 import java.util.Set;
@@ -12,25 +12,25 @@ import org.apache.lucene.analysis.WhitespaceTokenizer;
 import org.apache.lucene.analysis.snowball.SnowballFilter;
 
 /** MGI Specific Stemming Analyzer.
- * 
- * This analyzer splits on whitespace, converts everything to lowercase, removes stop 
+ *
+ * This analyzer splits on whitespace, converts everything to lowercase, removes stop
  * words, removes ending english punctuation and finally stems resulting tokens
- * 
+ *
  * @author mhall
  *
  */
 
 
 public class StemmedMGIAnalyzer  extends Analyzer {
-	
+
 	private Set stopWords;
-	
+
 	/**
 	 * Creates a new MGIAnalyzer, and constructs its stopwords list.
-	 * 
-	 * <br>This list is taken from the lucene standard stop word list for the english language. 
+	 *
+	 * <br>This list is taken from the lucene standard stop word list for the english language.
 	 */
-	
+
 	public StemmedMGIAnalyzer()
 	{
 		stopWords = StopFilter.makeStopSet(StopAnalyzer.ENGLISH_STOP_WORDS);
@@ -38,13 +38,13 @@ public class StemmedMGIAnalyzer  extends Analyzer {
 
 
 	/**
-	 * This method implements the specifics of this analyzer. 
-	 * 
-	 * <br><br> Chains WhitespaceTokenizer -> LowerCaseFilter -> 
-	 *  StopFilter -> EndPunctFilter -> SnowballFilter (English) to provide 
+	 * This method implements the specifics of this analyzer.
+	 *
+	 * <br><br> Chains WhitespaceTokenizer -> LowerCaseFilter ->
+	 *  StopFilter -> EndPunctFilter -> SnowballFilter (English) to provide
 	 *  mgi custom tokens
 	 */
-	
+
 	public TokenStream tokenStream(String fieldName, Reader reader)
 	{
 		return new SnowballFilter(new EndPunctFilter(new StopFilter(new LowerCaseFilter(new WhitespaceTokenizer(reader)), stopWords)), "English");

@@ -1,4 +1,4 @@
-package QS_Commons;
+package org.jax.mgi.shr.searchtool;
 
 import java.io.Reader;
 import java.util.Set;
@@ -13,13 +13,13 @@ import org.apache.lucene.analysis.snowball.SnowballFilter;
 
 /**
  * Custom MGI Analyzer
- * 
+ *
  * This analyzers Lowercases words, removes stop words, strips of ending english
  * punctuation removes any tokens containing prefix searches, removes
  * encompassing Double qoutes, and then stems the tokens.
- * 
+ *
  * @author mhall
- * 
+ *
  */
 
 public class StemmedMGITokenCountAnalyzer extends Analyzer {
@@ -29,14 +29,14 @@ public class StemmedMGITokenCountAnalyzer extends Analyzer {
     /**
      * Create a new analyzer, and construct its stop word list.
      */
-    
+
     public StemmedMGITokenCountAnalyzer() {
         stopWords = StopFilter.makeStopSet(StopAnalyzer.ENGLISH_STOP_WORDS);
     }
 
     /**
      * Worker for this Analyzer.
-     * 
+     *
      * <br>
      * <br>
      * Specifically this analyzer chains together WhitespaceTokenizer ->
@@ -50,5 +50,5 @@ public class StemmedMGITokenCountAnalyzer extends Analyzer {
     }
 
 }
-	
+
 

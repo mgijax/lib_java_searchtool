@@ -1,4 +1,4 @@
-package QS_Commons;
+package org.jax.mgi.shr.searchtool;
 
 /**
 * IndexConstants gives names to the keys for common index entries such as

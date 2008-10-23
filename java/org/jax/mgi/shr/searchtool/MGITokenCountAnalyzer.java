@@ -1,4 +1,4 @@
-package QS_Commons;
+package org.jax.mgi.shr.searchtool;
 
 import java.io.Reader;
 import java.util.Set;
@@ -12,12 +12,12 @@ import org.apache.lucene.analysis.WhitespaceTokenizer;
 
 /**
  * Custom MGI Analayzer
- * 
+ *
  * @author mhall
  *
- * This analyzer tokenizes on whitespace, lowercases the token, 
+ * This analyzer tokenizes on whitespace, lowercases the token,
  * strips off ending punctuation, and then removes and quo tation marks.
- * 
+ *
  */
 
 public class MGITokenCountAnalyzer extends Analyzer {
@@ -30,7 +30,7 @@ public class MGITokenCountAnalyzer extends Analyzer {
 
     /**
      * Worker for this Analyzer.
-     * 
+     *
      * <br>
      * <br>
      * Specifically this analyzer chains together WhitespaceTokenizer ->

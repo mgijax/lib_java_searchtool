@@ -1,4 +1,4 @@
-package QS_Commons;
+package org.jax.mgi.shr.searchtool;
 
 import java.io.Reader;
 import java.util.Set;
@@ -17,28 +17,28 @@ import org.apache.lucene.analysis.WhitespaceTokenizer;
  */
 
 public class MGIAnalyzer  extends Analyzer {
-	
+
 	private Set stopWords;
-	
+
 	/**
 	 * Creates a new MGIAnalyzer, and constructs its stop words list.
-	 * 
-	 * <br>This list is taken from the Lucene standard stop word list 
-	 * for the English language. 
+	 *
+	 * <br>This list is taken from the Lucene standard stop word list
+	 * for the English language.
 	 */
-	
+
 	public MGIAnalyzer()
 	{
 		stopWords = StopFilter.makeStopSet(StopAnalyzer.ENGLISH_STOP_WORDS);
 	}
-	
-	/** 
+
+	/**
 	 * Worker for this Analyzer.
-	 * 
+	 *
 	 * <br><br>Specifically this analyzer chains together WhitespaceTokenizer -> LowerCaseFilter ->
 	 *  StopFilter -> EndPunctFilter together to form customized MGI Tokens
 	 */
-	
+
 	public TokenStream tokenStream(String fieldName, Reader reader)
 	{
 		return new EndPunctFilter(new StopFilter(new LowerCaseFilter(new WhitespaceTokenizer(reader)), stopWords));

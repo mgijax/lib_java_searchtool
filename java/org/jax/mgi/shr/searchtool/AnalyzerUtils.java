@@ -1,4 +1,4 @@
-package QS_Commons;
+package org.jax.mgi.shr.searchtool;
 
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.Token;
@@ -9,22 +9,22 @@ import java.util.ArrayList;
 
 /**
  * Utility class used for test harnesses to test out various analyzers.
- * 
+ *
  * @author - Lucene in Action - Source taken from the Lucene in action book
- * 
+ *
  */
 
 public class AnalyzerUtils {
-    
+
     /**
      * Return an arrary of tokens gotten from the analyzer.
-     * 
+     *
      * @param analyzer
      * @param text
      * @return
      * @throws IOException
      */
-    
+
     public static Token[] tokensFromAnalysis(Analyzer analyzer, String text) throws IOException {
         TokenStream stream = analyzer.tokenStream("contents", new StringReader(text));
         ArrayList<Token> tokenList = new ArrayList<Token>();
@@ -41,13 +41,13 @@ public class AnalyzerUtils {
 
     /**
      * Get an ArrayList of tokens gotten from the analyzer.
-     * 
+     *
      * @param analyzer
      * @param text
      * @return
      * @throws IOException
      */
-    
+
     public static ArrayList<String> getTokenList(Analyzer analyzer, String text) throws IOException {
         TokenStream stream = analyzer.tokenStream("contents", new StringReader(text));
         ArrayList<String> tokenList = new ArrayList<String>();
@@ -74,12 +74,12 @@ public class AnalyzerUtils {
     /**
      * Display (print) the list of tokens from the analyzer, with some formatting
      * to show the tokens borders.
-     * 
+     *
      * @param analyzer
      * @param text
      * @throws IOException
      */
-    
+
     public static void displayTokensWithPositions(Analyzer analyzer, String text) throws IOException {
         Token[] tokens = tokensFromAnalysis(analyzer, text);
 
