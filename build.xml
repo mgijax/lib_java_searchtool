@@ -8,10 +8,7 @@
    -->
    <property environment="env"/>
    <property name="jar.name" value="searchtool"/>
-   <property name="classpath" value="${env.VELOCITY}:${env.JUNIT}:${env.STAXAPI}:${env.STAXRI}
-     /usr/local/lucene-2.3.2/luceneweb.war:
-     /usr/local/lucene-2.3.2/lucene-core-2.3.2.jar:
-     /usr/local/lucene-2.3.2/contrib/snowball/lucene-snowball-2.3.2.jar
+   <property name="classpath" value="${env.LUCENEWEB}:${env.LUCENECORE}:${env.LUCENESNOWBALL}
    "/>
 
    <!-- Import the universal targets.
