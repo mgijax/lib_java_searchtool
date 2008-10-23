@@ -14,7 +14,4 @@ cd `dirname $0`
 
 . ./Configuration
 
-JAVA_HOME=/usr/mgijava6
-export JAVA_HOME
-
 $ANT buildall
