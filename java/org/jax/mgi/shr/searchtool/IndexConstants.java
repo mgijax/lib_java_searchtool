@@ -21,6 +21,7 @@ public class IndexConstants {
 
     // data_type values
     public static final String ACCESSION_ID         = "ACC_ID";
+    public static final String VOC_ACCESSION_ID     = "VOC_ACC_ID";
     public static final String ALLELE_ACCESSION_ID  = "ALL_ACC_ID";
     public static final String ORTH_ACCESSION_ID    = "ORTH_ACC_ID";
     public static final String ES_ACCESSION_ID      = "ES_CELL_LINE_ACC_ID";
