@@ -19,6 +19,12 @@ public class IndexConstants {
     public static final String PIRSF_TYPE_NAME      = "PS";
     public static final String INTERPRO_TYPE_NAME   = "IP";
 
+    // Database type values
+
+    public static final String MP_DATABASE_TYPE	    = "Mammalian Phenotype";
+    public static final String PIRSF_DATABASE_TYPE  = "PIR Superfamily";
+    public static final String INTERPRO_DATABASE_TYPE = "InterPro Domains";
+
     // data_type values
     public static final String ACCESSION_ID         = "ACC_ID";
     public static final String VOC_ACCESSION_ID     = "VOC_ACC_ID";
