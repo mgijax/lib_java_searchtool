@@ -8,15 +8,16 @@ import org.apache.lucene.analysis.TokenStream;
 
 /**
  * Filter the qoutes from the start or end of a string.
- *
+ * 
  * @author mhall
- *
+ * 
  */
 
 public class QuoteFilter extends TokenFilter {
 
     /**
      * Public constructor, simply passes its stream onto the superclass.
+     * 
      * @param stream
      */
 
@@ -25,13 +26,14 @@ public class QuoteFilter extends TokenFilter {
     }
 
     /**
-     * This is the workhorse of this filter, it first checks to see if the ending character
-     * is a ", if so it strips it off.
-     *
-     * It then checks to see if the starting character is a ", if so it strips it off.
-     *
+     * This is the workhorse of this filter, it first checks to see if the
+     * ending character is a ", if so it strips it off.
+     * 
+     * It then checks to see if the starting character is a ", if so it strips
+     * it off.
+     * 
      * We then return the modified token.
-     *
+     * 
      */
 
     public final Token next(Token result) throws IOException {

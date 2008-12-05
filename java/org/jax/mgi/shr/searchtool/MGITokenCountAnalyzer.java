@@ -12,12 +12,12 @@ import org.apache.lucene.analysis.WhitespaceTokenizer;
 
 /**
  * Custom MGI Analayzer
- *
+ * 
  * @author mhall
- *
- * This analyzer tokenizes on whitespace, lowercases the token,
- * strips off ending punctuation, and then removes and quo tation marks.
- *
+ * 
+ * This analyzer tokenizes on whitespace, lower cases the token, strips off
+ * ending punctuation, and then removes and quotation marks.
+ * 
  */
 
 public class MGITokenCountAnalyzer extends Analyzer {
@@ -30,17 +30,16 @@ public class MGITokenCountAnalyzer extends Analyzer {
 
     /**
      * Worker for this Analyzer.
-     *
-     * <br>
-     * <br>
+     * 
      * Specifically this analyzer chains together WhitespaceTokenizer ->
      * LowerCaseFilter -> QouteFilter -> PrefixFilter -> StopFilter ->
      * EndPunctFilter together to form customized MGI Tokens
      */
 
     public TokenStream tokenStream(String fieldName, Reader reader) {
-        return new QuoteFilter(new PrefixFilter(new EndPunctFilter(new StopFilter(new LowerCaseFilter(
-                new WhitespaceTokenizer(reader)), stopWords))));
+        return new QuoteFilter(new PrefixFilter(new EndPunctFilter(
+                new StopFilter(new LowerCaseFilter(new WhitespaceTokenizer(
+                        reader)), stopWords))));
     }
 
 }

@@ -13,13 +13,13 @@ import org.apache.lucene.analysis.snowball.SnowballFilter;
 
 /**
  * Custom MGI Analyzer
- *
- * This analyzers Lowercases words, removes stop words, strips of ending english
- * punctuation removes any tokens containing prefix searches, removes
- * encompassing Double qoutes, and then stems the tokens.
- *
+ * 
+ * This analyzers Lower cases words, removes stop words, strips off ending
+ * English punctuation, removes any tokens containing prefix searches, removes
+ * encompassing Double quotes, and then stems the tokens.
+ * 
  * @author mhall
- *
+ * 
  */
 
 public class StemmedMGITokenCountAnalyzer extends Analyzer {
@@ -36,19 +36,17 @@ public class StemmedMGITokenCountAnalyzer extends Analyzer {
 
     /**
      * Worker for this Analyzer.
-     *
-     * <br>
-     * <br>
+     * 
      * Specifically this analyzer chains together WhitespaceTokenizer ->
      * LowerCaseFilter -> StopFilter -> EndPunctFilter together to form
      * customized MGI Tokens
      */
 
     public TokenStream tokenStream(String fieldName, Reader reader) {
-        return new SnowballFilter(new QuoteFilter(new PrefixFilter(new EndPunctFilter(new StopFilter(
-                new LowerCaseFilter(new WhitespaceTokenizer(reader)), stopWords)))), "English");
+        return new SnowballFilter(new QuoteFilter(new PrefixFilter(
+                new EndPunctFilter(new StopFilter(new LowerCaseFilter(
+                        new WhitespaceTokenizer(reader)), stopWords)))),
+                "English");
     }
 
 }
-
-

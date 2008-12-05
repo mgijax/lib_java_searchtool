@@ -9,24 +9,27 @@ import java.util.ArrayList;
 
 /**
  * Utility class used for test harnesses to test out various analyzers.
- *
+ * 
  * @author - Lucene in Action - Source taken from the Lucene in action book
- *
+ * 
  */
 
 public class AnalyzerUtils {
 
     /**
-     * Return an arrary of tokens gotten from the analyzer.
-     *
+     * Return an array of tokens gotten from the analyzer.
+     * 
      * @param analyzer
      * @param text
-     * @return
+     * @return A Token Array containing all the tokens in the string.
      * @throws IOException
      */
 
-    public static Token[] tokensFromAnalysis(Analyzer analyzer, String text) throws IOException {
-        TokenStream stream = analyzer.tokenStream("contents", new StringReader(text));
+    public static Token[] tokensFromAnalysis(Analyzer analyzer, String text)
+            throws IOException {
+        
+        TokenStream stream =
+            analyzer.tokenStream("contents", new StringReader(text));
         ArrayList<Token> tokenList = new ArrayList<Token>();
         while (true) {
             Token token = stream.next();
@@ -41,15 +44,17 @@ public class AnalyzerUtils {
 
     /**
      * Get an ArrayList of tokens gotten from the analyzer.
-     *
+     * 
      * @param analyzer
      * @param text
-     * @return
+     * @return An ArrayList containing all the tokens in the given string.
      * @throws IOException
      */
 
-    public static ArrayList<String> getTokenList(Analyzer analyzer, String text) throws IOException {
-        TokenStream stream = analyzer.tokenStream("contents", new StringReader(text));
+    public static ArrayList<String> getTokenList(Analyzer analyzer, String text)
+            throws IOException {
+        TokenStream stream =
+            analyzer.tokenStream("contents", new StringReader(text));
         ArrayList<String> tokenList = new ArrayList<String>();
         while (true) {
             Token token = stream.next();
@@ -61,7 +66,8 @@ public class AnalyzerUtils {
         return tokenList;
     }
 
-    public static void displayTokens(Analyzer analyzer, String text) throws IOException {
+    public static void displayTokens(Analyzer analyzer, String text)
+            throws IOException {
         Token[] tokens = tokensFromAnalysis(analyzer, text);
 
         for (int i = 0; i < tokens.length; i++) {
@@ -72,15 +78,16 @@ public class AnalyzerUtils {
     }
 
     /**
-     * Display (print) the list of tokens from the analyzer, with some formatting
-     * to show the tokens borders.
-     *
+     * Display (print) the list of tokens from the analyzer, with some
+     * formatting to show the tokens borders.
+     * 
      * @param analyzer
      * @param text
      * @throws IOException
      */
 
-    public static void displayTokensWithPositions(Analyzer analyzer, String text) throws IOException {
+    public static void displayTokensWithPositions(Analyzer analyzer, String text)
+            throws IOException {
         Token[] tokens = tokensFromAnalysis(analyzer, text);
 
         int position = 0;

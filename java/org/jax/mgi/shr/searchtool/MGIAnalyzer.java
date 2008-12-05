@@ -10,39 +10,40 @@ import org.apache.lucene.analysis.StopFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.WhitespaceTokenizer;
 
-/** MGI Specific Analyzer
+/**
+ * MGI Specific Analyzer
+ * 
  * @author mhall
- *
- * This analayzer tokeinzes on whitespace, and strips off ending punctuation.
+ * 
+ * This analyzer tokenizes on whitespace, and strips off ending punctuation.
  */
 
-public class MGIAnalyzer  extends Analyzer {
+public class MGIAnalyzer extends Analyzer {
 
-	private Set stopWords;
+    private Set stopWords;
 
-	/**
-	 * Creates a new MGIAnalyzer, and constructs its stop words list.
-	 *
-	 * <br>This list is taken from the Lucene standard stop word list
-	 * for the English language.
-	 */
+    /**
+     * Creates a new MGIAnalyzer, and constructs its stop words list.
+     * 
+     * This list is taken from the Lucene standard stop word list for the
+     * English language.
+     */
 
-	public MGIAnalyzer()
-	{
-		stopWords = StopFilter.makeStopSet(StopAnalyzer.ENGLISH_STOP_WORDS);
-	}
+    public MGIAnalyzer() {
+        stopWords = StopFilter.makeStopSet(StopAnalyzer.ENGLISH_STOP_WORDS);
+    }
 
-	/**
-	 * Worker for this Analyzer.
-	 *
-	 * <br><br>Specifically this analyzer chains together WhitespaceTokenizer -> LowerCaseFilter ->
-	 *  StopFilter -> EndPunctFilter together to form customized MGI Tokens
-	 */
+    /**
+     * Worker for this Analyzer.
+     * 
+     * Specifically this analyzer chains together WhitespaceTokenizer ->
+     * LowerCaseFilter -> StopFilter -> EndPunctFilter together to form
+     * customized MGI Tokens
+     */
 
-	public TokenStream tokenStream(String fieldName, Reader reader)
-	{
-		return new EndPunctFilter(new StopFilter(new LowerCaseFilter(new WhitespaceTokenizer(reader)), stopWords));
-	}
+    public TokenStream tokenStream(String fieldName, Reader reader) {
+        return new EndPunctFilter(new StopFilter(new LowerCaseFilter(
+                new WhitespaceTokenizer(reader)), stopWords));
+    }
 
 }
-
