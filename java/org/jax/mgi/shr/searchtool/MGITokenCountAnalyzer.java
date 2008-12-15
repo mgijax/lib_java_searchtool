@@ -25,7 +25,7 @@ public class MGITokenCountAnalyzer extends Analyzer {
     private Set stopWords;
 
     public MGITokenCountAnalyzer() {
-        stopWords = StopFilter.makeStopSet(StopAnalyzer.ENGLISH_STOP_WORDS);
+        stopWords = StopFilter.makeStopSet(MGIStopWords.MGI_STOP_WORDS);
     }
 
     /**
