@@ -92,6 +92,7 @@ public class IndexConstants {
     public static final String COL_OFFSET           = "offset";
     public static final String COL_START_POS        = "start_pos";
     public static final String COL_STOP_POS         = "stop_pos";
+    public static final String COL_STRAND           = "strand";
     public static final String COL_ACC_ID           = "acc_id";
     public static final String COL_MGI_ID           = "mgi_id";
     public static final String COL_ANNOT_COUNT      = "annotation_count";
