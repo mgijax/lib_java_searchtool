@@ -20,7 +20,6 @@ public class IndexConstants {
     public static final String INTERPRO_TYPE_NAME   = "IP";
 
     // Database type values
-
     public static final String MP_DATABASE_TYPE	    = "Mammalian Phenotype";
     public static final String PIRSF_DATABASE_TYPE  = "PIR Superfamily";
     public static final String INTERPRO_DATABASE_TYPE = "InterPro Domains";
@@ -49,7 +48,6 @@ public class IndexConstants {
     public static final String ORTHOLOG_SYNONYM     = "OY";
 
     // Other Bucket data type values
-
     public static final String OTHER_PROBE          = "PROBE";
     public static final String OTHER_REFERENCE      = "REFERENCE";
     public static final String OTHER_SEQUENCE       = "SEQUENCE";
@@ -93,6 +91,7 @@ public class IndexConstants {
     public static final String COL_START_POS        = "start_pos";
     public static final String COL_STOP_POS         = "stop_pos";
     public static final String COL_STRAND           = "strand";
+    public static final String COL_LOC_DISPLAY      = "location_display";
     public static final String COL_ACC_ID           = "acc_id";
     public static final String COL_MGI_ID           = "mgi_id";
     public static final String COL_ANNOT_COUNT      = "annotation_count";
