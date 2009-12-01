@@ -1,7 +1,13 @@
+TAG: lib_java_searchtool-4-3-2-0
+DATE: 12/2/2009
+STAFF: pf
+CHANGES: 4.32 release tags
+
+TAG: lib_java_searchtool-tr9924-1
 TAG: lib_java_searchtool-tr9924-BP
 DATE: 10/30/2009
 STAFF: mhall
-CHANGES: Branch point for TR 9924
+CHANGES: Branch point for TR 9924 and dev tags
 
 TAG: lib_java_searchtool-4-2-0-5
 DATE: 12/15/2008
