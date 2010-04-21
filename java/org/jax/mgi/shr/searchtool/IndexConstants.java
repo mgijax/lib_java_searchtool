@@ -11,6 +11,7 @@ public class IndexConstants {
 
     // object_type values
     public static final String MARKER_TYPE_NAME     = "MARKER";
+    public static final String ALLELE_TYPE_NAME     = "ALLELE";
     public static final String MP_TYPE_NAME         = "MP";
     public static final String GO_TYPE_NAME         = "GO";
     public static final String OMIM_TYPE_NAME       = "OMIM";
@@ -92,6 +93,7 @@ public class IndexConstants {
     public static final String COL_STOP_POS         = "stop_pos";
     public static final String COL_STRAND           = "strand";
     public static final String COL_LOC_DISPLAY      = "location_display";
+    public static final String COL_OBJECT_TYPE      = "object_type";
     public static final String COL_ACC_ID           = "acc_id";
     public static final String COL_MGI_ID           = "mgi_id";
     public static final String COL_ANNOT_COUNT      = "annotation_count";
@@ -101,6 +103,7 @@ public class IndexConstants {
     public static final String COL_CHILD_IDS        = "child_ids";
     public static final String COL_CONTENTS         = "contents";
     public static final String COL_GENE_IDS         = "gene_ids";
+    public static final String COL_FEATURE_IDS      = "feature_ids";
     public static final String COL_MARKER_COUNT     = "marker_count";
     public static final String COL_OTHER_NAME       = "name";
 
