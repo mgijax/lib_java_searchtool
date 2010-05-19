@@ -106,5 +106,6 @@ public class IndexConstants {
     public static final String COL_FEATURE_IDS      = "feature_ids";
     public static final String COL_MARKER_COUNT     = "marker_count";
     public static final String COL_OTHER_NAME       = "name";
+    public static final String COL_BATCH_FORWARD_VALUE = "batch_forward_value";
 
 }
