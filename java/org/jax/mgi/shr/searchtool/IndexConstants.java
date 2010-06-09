@@ -84,16 +84,16 @@ public class IndexConstants {
     public static final String COL_UNIQUE_KEY       = "unique_key";
 
     // lucene column headings for caches (cache indexes may use columns from searches)
-    public static final String COL_MARKER_SYMBOL    = "symbol";
+    public static final String COL_FEATURE_SYMBOL   = "symbol";
     public static final String COL_CHROMOSOME       = "chr";
-    public static final String COL_MARKER_NAME      = "name";
-    public static final String COL_MARKER_TYPE      = "marker_type";
+    public static final String COL_FEATURE_NAME     = "name";
     public static final String COL_OFFSET           = "offset";
     public static final String COL_START_POS        = "start_pos";
     public static final String COL_STOP_POS         = "stop_pos";
     public static final String COL_STRAND           = "strand";
     public static final String COL_LOC_DISPLAY      = "location_display";
     public static final String COL_OBJECT_TYPE      = "object_type";
+    public static final String COL_FEATURE_TYPE     = "feature_type";
     public static final String COL_ACC_ID           = "acc_id";
     public static final String COL_MGI_ID           = "mgi_id";
     public static final String COL_ANNOT_COUNT      = "annotation_count";
