@@ -11,6 +11,7 @@ public class IndexConstants {
 
     // object_type values
     public static final String MARKER_TYPE_NAME     = "MARKER";
+    public static final String ALLELE_TYPE_NAME     = "ALLELE";
     public static final String MP_TYPE_NAME         = "MP";
     public static final String GO_TYPE_NAME         = "GO";
     public static final String OMIM_TYPE_NAME       = "OMIM";
@@ -83,15 +84,16 @@ public class IndexConstants {
     public static final String COL_UNIQUE_KEY       = "unique_key";
 
     // lucene column headings for caches (cache indexes may use columns from searches)
-    public static final String COL_MARKER_SYMBOL    = "symbol";
+    public static final String COL_FEATURE_SYMBOL   = "symbol";
     public static final String COL_CHROMOSOME       = "chr";
-    public static final String COL_MARKER_NAME      = "name";
-    public static final String COL_MARKER_TYPE      = "marker_type";
+    public static final String COL_FEATURE_NAME     = "name";
     public static final String COL_OFFSET           = "offset";
     public static final String COL_START_POS        = "start_pos";
     public static final String COL_STOP_POS         = "stop_pos";
     public static final String COL_STRAND           = "strand";
     public static final String COL_LOC_DISPLAY      = "location_display";
+    public static final String COL_OBJECT_TYPE      = "object_type";
+    public static final String COL_FEATURE_TYPE     = "feature_type";
     public static final String COL_ACC_ID           = "acc_id";
     public static final String COL_MGI_ID           = "mgi_id";
     public static final String COL_ANNOT_COUNT      = "annotation_count";
@@ -101,7 +103,9 @@ public class IndexConstants {
     public static final String COL_CHILD_IDS        = "child_ids";
     public static final String COL_CONTENTS         = "contents";
     public static final String COL_GENE_IDS         = "gene_ids";
+    public static final String COL_FEATURE_IDS      = "feature_ids";
     public static final String COL_MARKER_COUNT     = "marker_count";
     public static final String COL_OTHER_NAME       = "name";
+    public static final String COL_BATCH_FORWARD_VALUE = "batch_forward_value";
 
 }
