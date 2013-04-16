@@ -61,6 +61,7 @@ public class IndexConstants {
     public static final String OTHER_SNP            = "SNP";
     public static final String OTHER_SUBSNP         = "SUBSNP";
     public static final String OTHER_ORTHOLOG       = "ORTHOLOG";
+    public static final String OTHER_HOMOLOGY       = "HOMOLOGY";
     public static final String OTHER_AMA            = "AMA";
     public static final String OTHER_ESCELL         = "ESCELL";
 
