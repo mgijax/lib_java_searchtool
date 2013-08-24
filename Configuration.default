@@ -15,7 +15,3 @@ then
 fi
 
 . ${MGICONFIG}/master.config.sh
-
-JAVA_HOME=/usr/mgijava6
-export JAVA_HOME
-
