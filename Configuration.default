@@ -15,3 +15,12 @@ then
 fi
 
 . ${MGICONFIG}/master.config.sh
+
+#
+# If Java 7 is not installed on this server, use Java 6.
+#
+if [ ! -d /usr/mgijava7 ]
+then
+    JAVA_HOME=/usr/mgijava6
+    export JAVA_HOME
+fi
