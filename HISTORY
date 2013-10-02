@@ -1,3 +1,9 @@
+TAG: lib_java_searchtool-5-1-5-2
+DATE: 10/2/2013
+STAFF: dbm
+CHANGES:
+1) Configuration.default - use java 6 if java 7 is not installed
+
 TAG: lib_java_searchtool-5-1-5-1
 DATE: 08/24/2013
 STAFF: dbm
