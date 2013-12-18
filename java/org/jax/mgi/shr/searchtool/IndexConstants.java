@@ -14,6 +14,7 @@ public class IndexConstants {
     public static final String ALLELE_TYPE_NAME     = "ALLELE";
     public static final String MP_TYPE_NAME         = "MP";
     public static final String GO_TYPE_NAME         = "GO";
+    public static final String EMAPA_TYPE_NAME      = "EMAPA";
     public static final String OMIM_TYPE_NAME       = "OMIM";
     public static final String OMIM_ORTH_TYPE_NAME  = "OMIM/ORTH";
     public static final String AD_TYPE_NAME         = "AD";
