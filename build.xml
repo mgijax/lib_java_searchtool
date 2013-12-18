@@ -8,8 +8,7 @@
    -->
    <property environment="env"/>
    <property name="jar.name" value="searchtool"/>
-   <property name="classpath" value="${env.LUCENEWEB}:${env.LUCENECORE}:${env.LUCENESNOWBALL}
-   "/>
+   <property name="classpath" value="${env.LUCENEWEB}:${env.LUCENECORE}:${env.LUCENESNOWBALL}"/>
 
    <!-- Import the universal targets.
    -->
@@ -17,7 +16,6 @@
 
    <!-- Define product specific targets.
    -->
-   <target name="buildall" description="Executes task 'all'"
-           depends="all, link">
+   <target name="buildall" description="Executes task 'all'" depends="all, link">
    </target>
 </project>
