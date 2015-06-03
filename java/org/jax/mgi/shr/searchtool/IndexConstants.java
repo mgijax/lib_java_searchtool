@@ -58,6 +58,7 @@ public class IndexConstants {
     public static final String OTHER_ANTIBODY       = "ANTIBODY";
     public static final String OTHER_ANTIGEN        = "ANTIGEN";
     public static final String OTHER_EXPERIMENT     = "EXPERIMENT";
+    public static final String OTHER_GENOTYPE		= "GENOTYPE";
     public static final String OTHER_IMAGE          = "IMAGE";
     public static final String OTHER_ASSAY          = "ASSAY";
     public static final String OTHER_SNP            = "SNP";
