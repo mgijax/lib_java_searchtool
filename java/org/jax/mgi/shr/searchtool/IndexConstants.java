@@ -26,7 +26,7 @@ public class IndexConstants {
     public static final String MP_DATABASE_TYPE	  	 = "Mammalian Phenotype";
     public static final String PIRSF_DATABASE_TYPE 	 = "PIR Superfamily";
     public static final String INTERPRO_DATABASE_TYPE	 = "InterPro Domains";
-    public static final String PROTEIN_ISOFORM_NAME	 = "Proteoform";
+    public static final String PROTEOFORM_NAME		 = "Proteoform";
 
     // data_type values
     public static final String ACCESSION_ID         = "ACC_ID";
