@@ -8,7 +8,7 @@
    -->
    <property environment="env"/>
    <property name="jar.name" value="searchtool"/>
-   <property name="classpath" value="${env.LUCENEWEB}:${env.LUCENECORE}:${env.LUCENESNOWBALL}"/>
+   <property name="classpath" value="./lib/lucene-core-2.3.2.jar:./lib/lucene-snowball-2.3.2.jar"/>
 
    <!-- Import the universal targets.
    -->
