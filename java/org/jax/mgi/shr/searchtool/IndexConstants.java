@@ -28,6 +28,7 @@ public class IndexConstants {
     public static final String PIRSF_DATABASE_TYPE 	 = "PIR Superfamily";
     public static final String INTERPRO_DATABASE_TYPE	 = "InterPro Domains";
     public static final String PROTEOFORM_NAME		 = "Proteoform";
+    public static final String STRAIN_NAME		 	 = "Strain";
 
     // data_type values
     public static final String ACCESSION_ID         = "ACC_ID";
